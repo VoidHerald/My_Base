@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>perspective()</title>
+    <style>
+        body {
+            background: #000;
+            color: #ffe919;
+        }
+        @keyframes scroll {
+            from { top: 100%; }
+            to { top: -100%; }
+        }
+        .titles {
+            position: absolute;
+            width: 18em;
+            height: 50em;
+            bottom: 0;
+            left: 50%; margin-left: -9em;
+            font-size: 2em;
+            line-height: 1.5;
+            text-align: justify;
+            transform-origin: 50% 100%;
+            transform: perspective(300px) rotateX(25deg);
+            overflow: hidden;
+        }
+        .content {
+            position: absolute;
+            top: 100%;
+            animation: scroll 90s linear infinite;
+        }
+    </style>
+</head>
+<body>
+<div class="titles">
+    <div class="content"><p>В Галактике бушует гражданская война.
+        Корабли повстанцев, нанеся удар с тайной базы, одержали первую
+        победу над жестокой Галактической Империей.</p>
+        <p>Во время сражения шпионы повстанцев смогли добыть секретные чертежи
+            супероружия Империи — ЗВЕЗДЫ СМЕРТИ, укреплённой космической станции,
+            обладающей достаточной огневой мощью, чтобы уничтожить целую планету.</p>
+        <p>Преследуемая зловещими агентами Империи, принцесса Лея летит
+            домой на своём корабле, везя с собой украденные чертежи, которые
+            могут спасти её народ и вернуть свободу галактике...</p>
+    </div>
+</div>
+</body>
+</html>

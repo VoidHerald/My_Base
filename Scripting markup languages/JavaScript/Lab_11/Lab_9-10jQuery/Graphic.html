@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+  <script src="jquery.js"></script>
+</head>
+<body>
+  <form name="first">
+    <fieldset>
+
+      <legend>Graphs Functions:</legend>
+
+      <sapn>Choose function:</sapn>
+        <input type="radio" name="fun" value="x2" id="1c"><label for="1c">y=x2</label>
+        <input type="radio" name="fun" value="x3" id="2c"><label for="2c">y=x3</label>
+        <input type="radio" name="fun" value="sin(x)" id="3c"><label for="3c">y=sin(x)</label>
+        <input type="radio" name="fun" value="cos(x)" id="4c"><label for="4c">y=cos(x)</label>
+      <br>
+
+      <sapn>Choose colour for Chart</sapn>
+
+      <select name="select" id="selColor">
+        <option>red</option>
+        <option>yellow</option>
+        <option>blue</option>
+        <option>green</option>
+      </select>
+
+      <input type="button" value="DroveGraph" onclick="built()">
+    </fieldset>
+  </form>
+
+<script type="text/javascript">
+  function built(){
+    let myWindow=window.open("","BOX","width=700,height=700");
+    let color=$("#selColor").val();
+    myWindow.document.write(` <style>div{position:absolute;background-color:${color}}</style> `);
+
+    let windowWidth=myWindow.outerWidth;
+    let windowHeight=myWindow.outerHeight+200;
+
+    let x0=windowWidth/2;
+    let y0=windowHeight/2;
+    let kx= windowWidth/5;
+    let ky= windowHeight/5;
+
+    let func=$("input[name='fun']:checked").val();
+
+    let  Ord;
+
+    for ( let x = - 25; x < 25; x = x + 0.01 ){
+      switch (func){
+        case "x2": {
+          Ord=Math.pow(x,2);break;
+        }
+        case "x3": {
+          Ord=Math.pow(x,3);break;
+        }
+        case "sin(x)": {
+           Ord=Math.sin(x);break;
+        }
+        case "cos(x)": {
+          Ord=Math.cos(x);break;
+        }
+      }
+
+      myWindow.document.write(`<div style="left:${x0+kx*x}px;top:${y0-ky*Ord}px">.</div>`);
+    }
+  }
+
+</script>
+</body>
+</html>

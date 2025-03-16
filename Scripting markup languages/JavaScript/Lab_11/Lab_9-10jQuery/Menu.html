@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Test</title>
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <style>
+        .menu-item1{
+            background-color: rgb(96, 1, 151);
+            border: 2px solid gray;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;}
+        .menu-item2{
+            background-color: rgb(96, 1, 151);
+            border: 2px solid gray;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;}
+        .menu-item3{
+            background-color: rgb(96, 1, 151);
+            border: 2px solid gray;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;}
+        .submenu{
+            height: 20px;
+            width: 40px;
+            background: green;
+            position: absolute;
+            cursor: pointer;
+        }
+        #nav{background-color: rgba(19, 207, 166, 0.808);display: inline-block;}
+        div {background-color:rgb(5, 145, 68); border: 2px solid rgb(12, 179, 109);}
+    </style>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $(".submenu").animate({height: "toggle"})
+
+        $(".menu-item1").mouseover(function () {
+            $(this).children(".submenu").animate({height: "toggle"})
+        })
+
+        $(".menu-item1").mouseout(function () {
+            $(".menu-item1 .submenu").animate({height: "toggle"})
+        })
+
+
+
+        $(".menu-item2").mouseover(function(){
+            $(this).children(".submenu").animate({height: "toggle"})
+        })
+
+        $(".menu-item2").mouseout(function(){
+            $(this).children(".submenu").animate({height: "toggle"})
+        })
+
+
+
+        $(".menu-item3").mouseover(function(){
+            $(".menu-item3 .submenu").animate({height:"toggle"})
+        })
+
+        $(".menu-item3").mouseout(function(){
+            $(this).children(".submenu").animate({height: "toggle"})
+        })
+
+    });
+</script>
+<div id="nav">
+    <div  class="menu-item1" >Menu1
+        <div class="submenu" id="p1">
+            <div>****</div>
+            <div>****</div>
+            <div>****</div>
+            <div>****</div>
+        </div>
+    </div>
+    <div class="menu-item2" >Menu2
+        <div class="submenu" id="p2">
+            <div>****</div>
+            <div>****</div>
+            <div>****</div>
+            <div>****</div>
+        </div>
+    </div>
+    <div  class="menu-item3" >Menu3
+        <div class="submenu" id="p3">
+            <div>****</div>
+            <div>****</div>
+            <div>****</div>
+            <div>****</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

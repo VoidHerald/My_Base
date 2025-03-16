@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+        <link type="text/css" href="style.css" rel="stylesheet">
+		<script type="text/javascript">
+
+            function Rad_(){
+                let x0_ = 400,
+                    y0_ = 200,
+                    R_ = 100,
+                    A_ = 0,
+                    PI2_ = Math.PI * 2;
+
+                let dA_ = PI2_ / 360;
+                let block_ = document.getElementById('box_');
+
+                setInterval(function() {
+                    block_.style.left = x0_ + R_ * Math.cos(A_) + 'px';
+                    block_.style.top = y0_ + R_ * Math.sin(A_) + 'px';
+                    A_ -= dA_;
+                }, 20);
+            }
+
+
+            function Rad() {
+            let x0 = 200,
+                y0 = 200,
+                R = 100,
+                A = 0,
+                PI2 = Math.PI * 2;
+
+            let dA = PI2 / 100;
+            let block = document.getElementById('box');
+
+            setInterval(function() {
+                block.style.left = x0 + R * Math.cos(A) + 'px';
+                block.style.top = y0 + R * Math.sin(A) + 'px';
+                A += dA;
+                }, 40);
+        };
+         </script>
+    </head>
+    <body>
+        <input type="button" value="Action"  id="Start" onclick="Rad()" onmousedown="Rad_()" name="Button">
+        <div id="box" class="CircleSquare"></div>
+        <div id="box_" class="CircleSquare_"></div>
+        <script type="text/javascript">
+
+            function Rad_(){
+                let x0_ = 400,
+                    y0_ = 200,
+                    R_ = 100,
+                    A_ = 0,
+                    PI2_ = Math.PI * 2;
+
+                let dA_ = PI2_ / 360;
+                let block_ = document.getElementById('box_');
+
+                setInterval(function() {
+                    block_.style.left = x0_ + R_ * Math.cos(A_) + 'px';
+                    block_.style.top = y0_ + R_ * Math.sin(A_) + 'px';
+                    A_ -= dA_;
+                }, 20);
+            }
+
+
+            function Rad() {
+                let x0 = 200,
+                    y0 = 200,
+                    R = 100,
+                    A = 0,
+                    PI2 = Math.PI * 2;
+
+                let dA = PI2 / 100;
+                let block = document.getElementById('box');
+
+                setInterval(function() {
+                    block.style.left = x0 + R * Math.cos(A) + 'px';
+                    block.style.top = y0 + R * Math.sin(A) + 'px';
+                    A += dA;
+                }, 40);
+            };
+        </script>
+    </body>
+</html>

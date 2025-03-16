@@ -1,0 +1,108 @@
+.task1 div {
+    display: inline-block;
+    text-align: center;
+    border: 4px solid black;
+    margin: 0 20px 0 20px;
+    width: 200px;
+    height: 200px;
+    background-color:yellow;
+}
+
+.changer1:hover {
+    transform:scale(0.5);
+}
+
+.changer2:hover {
+    transform:
+            perspective(350px)
+            rotateY(30deg);
+}
+
+.changer3:hover {
+    transform:
+            perspective(350px)
+            rotateX(35deg);
+}
+
+.changer4:hover {
+    transform:
+            perspective(350px)
+            rotateY(-35deg);
+}
+
+
+
+
+.task2{
+    margin:20px;
+    text-align:center;
+    border: 4px dotted aqua;
+    background-color:pink;
+    width: 300px;
+    height: 300px;
+    color:rgb(255,0,0);
+    transition:color 20s linear;
+}
+
+.task2:hover{
+    color:rgb(0,0,255);
+}
+
+
+
+
+
+
+
+.photo-container-1 {
+    max-width: 380px;
+    width: 100%;
+    margin:0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+.photo-container-1 img {
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+.photo-container-1 .photo-0 {
+    position: relative;
+    z-index: -2;
+}
+.photo-container-1 .photo-1 {
+    position: absolute;
+    top: -100%;
+    animation: fromtop 10s linear 5s infinite;
+}
+.photo-container-1 .photo-2 {
+    position: absolute;
+    top: -100%;
+    animation: fromtop 10s linear infinite;
+}
+@keyframes fromtop {
+    0% {
+        top: -100%;
+    }
+    4% {
+        top: 0;
+    }
+    5% {
+        top: -20px;
+    }
+    6% {
+        top: 0;
+    }
+    49.99999% {
+        top: 0;
+        z-index: 1;
+    }
+    50% {
+        top: 0;
+        z-index: -1;
+    }
+    100% {
+        z-index: -1;
+        top: 0;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cl1">
+  **************<span onmouseover="this.style.color='blue'" onmouseout="this.style.color=''">Изменяет цвет при наведении мышки</span>*****************
+</div>
+
+
+<div class="cl1" onclick= "this.style.fontSize='40px'">Увеличивается при нажатии</div>
+
+
+
+<div class="cl1"><img alt="1" src="1.jpg" width="100px" height="100px" onclick="this.src='2.gif'" onmouseout="this.src='1.jpg'"></div>
+
+
+
+<div id="div4" class="cl1" onclick="chTextOnImg()">Изменяется на кртинку при нажатии</div>
+
+
+
+<div id="chsiZ" class="cl1"><img alt="1" id="img1"  width="100px" height="100px" src="1.jpg" onmouseover="chSizOfImg1(this)" onmouseout="chSizOfImg2(this)"></div>
+
+
+
+<div class="cl1" id="divlast"  ondblclick="chSizOfImg3()">При нажатии изменяет свой стиль (класс)</div>
+
+
+</body>
+</html>

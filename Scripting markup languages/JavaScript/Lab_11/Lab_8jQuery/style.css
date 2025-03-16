@@ -1,0 +1,16 @@
+.cl1{
+    background-color:red;
+    padding:12px;
+    border: 4px double black;
+    position: relative;
+}
+.cl2{
+    background-color:green;
+    padding:10px;
+}
+.cl3{
+    background-color:green;
+    padding:12px;
+    border: 8px dashed blue;
+    position: relative;
+}

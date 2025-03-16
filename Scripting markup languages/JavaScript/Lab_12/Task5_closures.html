@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+      function myClosure(param){
+          let numOfClicks=1;
+        function ChangeParam(){
+          let jqParam=$(param);
+          jqParam.attr("value",`Количество нажатий = ${numOfClicks++}`);
+        }
+        return ChangeParam
+      }
+
+      $(document).ready(function () {
+
+        let forButton1 = myClosure($("#button1"))
+        $("#button1").click(function () {
+          forButton1();
+        })
+
+        let forButton2 = myClosure($("#button2"))
+        $("#button2").click(function () {
+          forButton2();
+        })
+
+        let forButton3 = myClosure($("#button3"))
+        $("#button3").click(function () {
+          forButton3();
+        })
+
+      })
+    </script>
+</head>
+<body>
+<input type="button" value="Количество нажатий = 0" id="button1"> <br><br>
+<input type="button" value="Количество нажатий = 0" id="button2"> <br><br>
+<input type="button" value="Количество нажатий = 0" id="button3"> <br><br>
+</body>
+</html>

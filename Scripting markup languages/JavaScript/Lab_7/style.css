@@ -1,0 +1,9 @@
+#formDiv {
+    padding: 5px;
+    width: 600px;
+    border: 2px solid blueviolet;
+    background: crimson;
+}
+.radioCourse,.selectSpeciality,.checkboxSubjects {
+    display:inline-block;
+}

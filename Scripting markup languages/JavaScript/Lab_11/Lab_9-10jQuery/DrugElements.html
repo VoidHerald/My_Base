@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#DrgImg").mousedown(function (){
+                $(this).css({"position":"absolute","zIndex":"20"});
+
+                $(this).on("dragstart",function (){return false})
+
+                $(this).mousemove(function (event){
+                    $(this).css("left",`${ event.pageX - this.offsetWidth /2 }px`);
+                    $(this).css("top",`${ event.pageY - this.offsetHeight /2 }px`)
+                })
+
+                $(this).mouseup(function(event){
+                    $(this).unbind("mousemove");
+                    $(this).unbind("mouseup");
+                })
+
+            })
+
+            $("#DrgText").mousedown(function (){
+                $(this).css({"position":"absolute","zIndex":"20"});
+
+                $(this).on("dragstart",function (){return false})
+
+                $(this).mousemove(function (event){
+                    $(this).css("left",`${ event.pageX - this.offsetWidth /2 }px`);
+                    $(this).css("top",`${ event.pageY - this.offsetHeight /2 }px`)
+                })
+
+                $(this).mouseup(function(event){
+                    $(this).unbind("mousemove");
+                    $(this).unbind("mouseup");
+                })
+
+            })
+        });
+    </script>
+</head>
+<body>
+<img id="DrgImg" src="2.gif" whide="50px" height="50px">
+<textarea id="DrgText"></textarea>
+</body>
+</html>

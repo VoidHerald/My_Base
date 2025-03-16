@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".sp1").mouseover(function(){
+                $(".sp1").css("color","blue");
+            });
+
+
+            $(".sp1").mouseout(function (){
+                $(".sp1").css("color","black");
+            });
+
+
+            $("#sp2").click(function (){
+                if(  $("#sp2").css("font-size") == "16px" ){
+                    $("#sp2").css("font-size","30px");
+                }
+                else {
+                    $("#sp2").css("font-size","16px");
+                }
+            })
+
+
+            $("#img1").click(function (){
+                if($("#img1").attr("src") == "1.jpg"){
+                    $("#img1").attr("src","2.gif");
+                }
+                else {
+                    $("#img1").attr("src","1.jpg");
+                }
+
+
+            })
+
+
+            $("#img2").click(function (){
+                if( $(this).html() == "Изменяется на кртинку при нажатии"){
+
+                    $(this).html("<img src='3.gif'  width='100px' height='100px'>");
+                }
+                else {
+
+                    $(this).html("Изменяется на кртинку при нажатии");
+                }
+
+            })
+
+
+
+            $("#img3").mouseover(function (){
+                $(this).css("height","50px").css("width","300px");
+            });
+
+            $("#img3").mouseout(function (){
+                $(this).css("height","100px").css("width","100px");
+            });
+
+            $("#p1").dblclick(function (){
+                if(  $(this).attr("class") ==  "cl1"){
+                    $(this).attr("class","cl3");
+                }
+                else {
+                    $(this).attr("class","cl1");
+                }
+            })
+
+        });
+    </script>
+
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cl1">
+    ************<span class="sp1">Изменяет цвет при наведении мышки</span>*************
+</div>
+
+
+<div class="cl1" ><span id="sp2">Увеличивается при нажатии</span></div>
+
+
+
+<div class="cl1"><img id="img1" src="1.jpg" width="100px" height="100px"></div>
+
+
+
+<div id="img2" class="cl1">Изменяется на кртинку при нажатии</div>
+
+
+
+<div  class="cl1"><img id="img3"  width="100px" height="100px" src="1.jpg" ></div>
+
+
+
+<p class="cl1" id="p1" >При нажатии изменяет свой стиль (класс)</p>
+
+
+</body>
+</html>

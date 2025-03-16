@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="formDiv">
+    <form name="univUser">
+        <fieldset name="mainField">
+            <legend>Данные о пользователе</legend>
+
+
+            <label>
+                <strong>Расскажите о себе:</strong>
+                <br>
+                <textarea name="aboutYou" rows="3" cols="20"
+                          placeholder="Немного информации о себе">ФАКУЛЬТЕТ ИНФОРМАЦИООНЫХ ТЕХНОЛОГИЙ</textarea>
+            </label>
+
+            <br><br>
+
+            <label>
+                <strong>Имя:</strong>
+                <input type='text'  name="firstName" value="Иван" placeholder="Введите имя">
+            </label>
+
+            <br>
+
+            <label>
+                <strong>Фамилия:</strong>
+                <input type='text' name='lastName' value="Иванов" placeholder="Введите фамилию">
+            </label>
+
+            <br><br>
+
+            <div class="selectSpeciality" style="display: inline">
+
+                <label for="select">
+                    <strong>Специальность</strong>
+                </label>
+                <select name="speciality" id="select">
+                    <option value="non" disabled selected>Специальность</option>
+                    <option value="ПОИТ">ПОИТ</option>
+                    <option value="ИСИТ">ИСИТ</option>
+                    <option value="ДЭВИ">ДЭВИ</option>
+                    <option value="ПОИБМЦ">ПОИБМЦ</option>
+                </select>
+
+            </div>
+
+            <br><br>
+
+            <div class="radioCourse">
+                <span><strong>Укажите ваш курс:</strong></span><br>
+                <label>
+                    <input type='radio' name="course" value="1" checked>
+                    1
+                </label>
+                <label>
+                    <input type='radio' name='course' value="2">
+                    2
+                </label>
+                <label>
+                    <input type='radio' name='course' value="3">
+                    3
+                </label>
+                <label>
+                    <input type='radio' name='course' value="4">
+                    4
+                </label>
+            </div>
+
+            <br><br>
+
+            <div>
+                <span><strong>Выберите предметы для изучения:</strong></span>
+                <br>
+
+                <label>
+                <input type='checkbox' name='subjects' class="chSub" value="Математика  " />
+                Математика
+                </label>
+
+                <label>
+                <input type='checkbox' name='subjects' class="chSub" value="  ОИТ " />
+                ОИТ
+                </label>
+
+                <label>
+                <input type='checkbox' name='subjects' class="chSub" value="  ОАП  " />
+                ОАП
+                </label>
+
+                <label>
+                <input type='checkbox' name='subjects' class="chSub" value="  Физика  " />
+                Физика
+                </label>
+
+                <label>
+                <input type='checkbox' name='subjects' class="chSub" value=" История " />
+                История
+                </label>
+
+            </div>
+
+            <br><br>
+
+            <div>
+                <input type='button' value='Sumbit' onclick='fun1()' >
+                <input type='button' value='Reset' onclick='fun1()' >
+                <input type='button' value='Напечатать' onclick='Print()' >
+            </div>
+
+
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

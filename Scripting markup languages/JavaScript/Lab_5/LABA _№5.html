@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab-5</title>
+    <script type="text/javascript">
+
+
+   function fun1() {
+      document.write("<br>"+"Задание 1"+"<br>"+"<br>")
+      var j = document.all.length;
+      for (var i = 0; i <j; i++){
+      document.write("Элемент страницы ["+i+"] имеет имя тэга:"+document.all[i].tagName + "<\/br>");}}
+
+
+
+
+   function fun2 (){
+     for(var i=0; i<document.body.children.length;i++) {
+      alert("Тег"+(i+1)+"-"+document.body.children[i].tagName)}}
+
+
+
+   function fun3 () {
+   alert("Cейчас выведет значение первого элемента SPAN");
+   var span = document.getElementsByTagName('span')[0].innerHTML;
+   alert(span);
+
+
+   alert("Сейчас идет поиск по ID");
+   span = document.getElementById('fst');
+   alert(span.innerHTML);
+
+
+
+   alert("Сейчас идет поиск по коллекции all");
+   for (var i = 0; i < document.all.length; i++) {
+    if (document.all[i].tagName == "SPAN") {
+      alert("Элемент страницы [" + i + "] имеет имя тэга-- " + document.all(i).tagName + " и содержит  " + document.all(i).innerHTML);
+      break;}}}
+
+      
+
+   function fun4(){
+    var a=document.getElementById("tb1").innerHTML;
+    var b=document.getElementById("tb2").innerHTML;
+    var c=document.getElementById("tb3").innerHTML;
+    var d=document.getElementById("tb4").innerHTML;
+    var i=document.getElementById("tb5").innerHTML;
+    document.getElementsByTagName("span")[1].innerHTML+=(b/5+a/5+d/5+c/5+i/5);
+    alert(document.getElementsByTagName("span")[1].innerHTML);
+   }
+ 
+
+
+</script>
+</head>
+
+<body>
+<input type="button" onclick="fun1()" value="Задание 1"/>
+<input type="button" onclick="fun2()" value="Задание 2"/>
+<input type="button" onclick="fun3()" value="Задание 3"/>
+<input type="button" onclick="fun4()" value="Задание 4"/>
+<h1 class="HH">Я,<a1>Занько Андрей Владимирович</a1>, изучаю HTML и CSS </h1>
+<h2 class="HH">Сказки братьев Гримм</h2>
+<h3 class="HH">Король-лягушонок или Железный Генрих</h3>
+
+<p> <span id="fst">В</span> стародавние времена, когда заклятья ещё помогали, жил-был на свете король.
+ все дочери были у него красавицы, но самая младшая была так прекрасна, что даже солнце,
+ много видавшее на своем веку, и то удивлялось, сияя на её лице.
+ Вблизи королевского замка раскинулся большой дремучий лес, и был в том лесу под старою липой колодец;
+ и вот в жаркие дни младшая королевна выходила в лес, садилась на край студёного колодца,
+ и когда становилось ей скучно, она брала золотой мяч,
+ подбрасывала его вверх и ловила - это было её самой любимой игрой.
+</p>
+
+<h3 class="HH">Дружба кошки и мышки</h3>
+
+<p class="ab2"><span>К</span>ошка познакомилась с мышкой и столько пела ей про свою великую любовь и дружбу,
+ что мышка наконец согласилась поселиться с нею в одном доме и завести общее хозяйство.
+ "Да, вот к зиме нужно бы нам наготовить припасов, а не то голодать придется, - сказала кошка.
+ - Ты, мышка, не можешь ведь всюду ходить. Того гляди, кончишь тем, что в мышеловку угодишь."</p>
+
+<h3 class="HH">Волк и семеро козлят</h3>
+
+<p><span>Ж</span>ила-была старая коза. Было у ней семеро козлят, и она их так любила,
+ как может любить своих детей только мать.
+ Раз собралась она идти в лес, корму принести; вот созвала она всех своих семерых деток и говорит:
+ -Милые детки, хочу я в лес пойти, а вы смотрите волка берегитесь.
+ Если придет он сюда, то всех вас поест, заодно со шкурой и шерстью.
+ Этот злодей часто прикидывается, но вы его сразу узнаете по толстому голосу и по черным лапам.</p>
+
+<h2 class="HH">Types of writing in the cairn</h2>
+<ol>
+<li id="sp1">Koorvak</li>
+<ul class="ul1">
+<li>The raging thoughts of the original being emanate from this piece of rune flesh and flow through your mind.</li>
+<li>Devotee ... by my brothers and sisters. An empirion that disappeared into the eternal carpet of creation.</li>
+<li>The war is over, we ... lost.</li>
+</ul>
+<li>Dying God(Hton)</li>
+<ul class="ul2" type="disc">
+<li>My kin, in desperation, used the forbidden void to turn the tide in their favor.</li>
+<li>They may be victorious, but now they hear a maddening whisper.</li>
+<li>As for us, we are beaten. Now there is nothing left but to hide and heal our wounds.</li>
+</ul>
+<li>Ephyrials</li>
+<ul class="ul3" type="square">
+<li >The eyes of mortals should not see me in this state until I am ready to return to the stars and take revenge.</li>
+<li >Betrayal! Betrayal! Where is Ulzuin ?! What is this witchcraft? What did this witch do?</li>
+<li >The insidious sorcerer with whom she is allied will burn at an eternal fire for my amusement.</li>
+</ul>
+</ol>
+
+
+
+<h2 class="HH">Результаты сессии</h2>
+<table border>
+<tr>
+<td>ФИО</td><td colspan="3"><a href="my_page2.htm">Занько Андрей Владимирович</a></td>
+</tr>
+<tr>
+<td><img src="css/img/sun.jpg" width="100" height="100"></td><td colspan="3">Адрес:ул.Притыцкого,д.45,кв.49</td>
+</tr>
+<tr>
+<td rowspan="6">1семестр<br>2019/2020<br>уч.года</td><td>Дата</td><td>Прндмет</td><td>Оценка</td>
+</tr>
+<tr>
+<td>31.12.2019</td><td>ОАиП</td><td id="tb1">5</td>
+</tr>
+<tr>
+<td>5.01.2020</td><td>Физика</td><td id="tb2">6</td>
+</tr>
+<tr>
+<td>11.01.2020</td><td>ОИТ</td><td id="tb3" >4</td>
+</tr>
+<tr>
+<td>16.01.2017</td><td>Математика</td><td id="tb4" >5</td>
+</tr>
+<tr>
+<td>22.01.2017</td><td>АЛОЦВМ</td><td id="tb5">6</td>
+</tr>
+</table>
+
+</body>
+
+</html>

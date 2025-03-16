@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Title</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="jquery.js"></script>
+
+        <script type="text/javascript">
+            let startAnimTime;
+            let animBox1; let animBox2; let animBox3;
+
+            $(document).ready(function (){
+                $("#bt1").click(function () {
+                    $("#box1").animate({left: "+=100px"},"slow");
+                    $("#box2").animate({left: "+=150px"},"fast");
+                    $("#box3").animate({left: "+=100px"},4000);
+                })
+            })
+        </script>
+    </head>
+    
+    <body>
+        <input type="button" value="Action" id="bt1">
+        <div id="box1" class="Square" ></div>
+        <div id="box2" class="Square" style="top:240px"></div>
+        <div id="box3" class="Square" style="top:280px"></div>
+    </body>
+</html>

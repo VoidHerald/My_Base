@@ -1,0 +1,41 @@
+table {
+    border-collapse: separate;
+    border-spacing: 1px;
+    border: 2px solid rgb(189, 26, 26);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    empty-cells: hide;
+}
+thead {
+    font-size:1.2em;
+    text-align: center;
+    background-color:darkblue;
+}
+td,th{
+    border: 2px solid grey;
+}
+.sp1{
+    background-color: #72008b;
+}
+.sp2{
+    background-color: purple;
+}
+.sp3{
+    background-color:green;
+}
+form{
+    background-color:indigo;
+    color :rgba(255,255,255,1);
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+
+}
+input[type="text"],input[type="email"] {
+    background-color: rgba(255,255,255,.5);
+    color:rgba(255,255,255,1);
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.75);
+    border-radius: 5px;
+}

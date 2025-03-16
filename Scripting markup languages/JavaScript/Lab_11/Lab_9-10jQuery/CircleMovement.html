@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="html">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <script src="jquery.js"></script>
+
+    </head>
+    <body>
+        <input type="button" value="Action"  id="start" onclick="startAnim()" name="Button">
+        <div id="box" class="Square" ></div>
+        <script type="text/javascript">
+
+                let curLeft=0;
+                let intervalId;
+                function startAnim(){
+                    intervalId= setInterval(Rad,1);
+                }
+
+                function Rad(){
+                    curLeft+=5;
+                    $("#box").animate({left:`${curLeft}px`,top:`${Math.sin(curLeft/50)*75+200}px`},10);
+                    if(curLeft>1900){
+                        clearInterval(intervalId);
+                    }
+                }
+
+
+
+
+        </script>
+    </body>
+</html>

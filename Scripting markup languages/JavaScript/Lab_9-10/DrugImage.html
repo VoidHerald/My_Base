@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="html">
+    <head><title>Test</title></head>
+    <body>
+        <img id="DrgImg" src="2.gif" whide="50px" height="50px">
+        <textarea id="DrgText"></textarea>
+        <script>
+
+
+
+            skeleton=document.getElementById("DrgImg");
+            skeleton.onmousedown = function(event) {
+
+                skeleton.ondragstart = function() {
+                 return false;};
+
+                skeleton.style.position = "absolute";
+                skeleton.style.zIndex = "1000";
+
+
+
+              function moveAt(event) {
+                  skeleton.style.left = event.pageX - skeleton.offsetWidth / 2 + 'px';
+                  skeleton.style.top = event.pageY - skeleton.offsetHeight / 2 + 'px';
+               }
+
+                document.addEventListener('mousemove', moveAt);
+
+                skeleton.onmouseup = function() {
+                document.removeEventListener('mousemove', moveAt);
+                    skeleton.onmouseup = null;
+              };
+            };
+
+
+            TextAr=document.getElementById("DrgText");
+
+            TextAr.onmousedown = function(event) {
+                TextAr.ondragstart = function() {
+                    return false;};
+                TextAr.style.position = 'absolute';
+                TextAr.style.zIndex = 1000;
+
+                moveAt(event.pageX, event.pageY);
+
+
+                function moveAt(pageX, pageY) {
+                    TextAr.style.left = pageX - TextAr.offsetWidth / 2 + 'px';
+                    TextAr.style.top = pageY - TextAr.offsetHeight / 2 + 'px';
+                }
+
+                function onMouseMove(event) {
+                    moveAt(event.pageX, event.pageY);}
+
+                document.addEventListener('mousemove', onMouseMove);
+
+                TextAr.onmouseup = function() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    TextAr.onmouseup = null;
+                };
+            };
+
+          </script>
+    </body>
+</html>

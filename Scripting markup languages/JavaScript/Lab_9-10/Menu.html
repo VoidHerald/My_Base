@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="html">
+    <head><title>Test</title>
+        <style type="text/css">
+        .menu-item{
+        background-color: rgb(96, 1, 151);
+        border: 2px solid gray;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;}
+        .submenu{
+        height: 20px;
+        width: 40px;
+        background: green;
+        position: absolute;
+        cursor: pointer;
+        display:none;}
+        #nav{background-color: rgba(19, 207, 166, 0.808);display: inline-block;}
+        div {background-color:rgb(5, 145, 68); border: 2px solid rgb(12, 179, 109);}
+        </style>
+     </head>
+    <body>
+
+    <script>
+        function menu1(){var sub=document.getElementById("p1");
+        sub.style.display="block"}
+        function menu2(){var sub=document.getElementById("p2");
+        sub.style.display="block"}
+        function menu3(){var sub=document.getElementById("p3");
+        sub.style.display="block"}
+        
+
+        document.onmouseout=function(event){
+            var target = event.target;
+            if (target.className!='menu-item' && target.className!='submenu'){closeMenu();}
+            }
+
+            function closeMenu(){
+                var subm=document.getElementsByClassName('submenu');
+                for (var i=0; i <subm.length; i++){subm[i].style.display ="none";}
+            }
+    </script>
+
+    <div id="nav">
+        <div class="menu-item" onmouseover ="menu1()">
+            Menu1
+            <div class="submenu" id="p1">
+                <div>****</div>
+                <div>****</div>
+                <div>****</div>
+                <div>****</div>
+            </div>
+        </div>
+
+        <div class="menu-item" onmouseover ="menu2()">
+            Menu2
+            <div class="submenu" id="p2">
+                <div>****</div>
+                <div>****</div>
+                <div>****</div>
+                <div>****</div>
+            </div>
+        </div>
+
+        <div class="menu-item" onmouseover ="menu3()">
+            Menu3
+            <div class="submenu" id="p3">
+                <div>****</div>
+                <div>****</div>
+                <div>****</div>
+                <div>****</div>
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Title</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <input type="button" value="Action"  onclick="AnimStart()">
+        <div id="box1" class="Square" ></div>
+        <div id="box2" class="Square" style="top:240px"></div>
+        <div id="box3" class="Square" style="top:280px"></div>
+        <script>
+
+            let startAnimTime;
+            let length1=0; let length2=0; let length3=0;
+            let animBox1; let animBox2; let animBox3;
+
+            function AnimStart(){
+                animBox1=setInterval(slowAnim,20);
+                animBox2=setInterval(midAnim,20);
+                animBox3=setInterval(fastAnim,20);
+                startAnimTime=Date.now()
+            }
+
+            function slowAnim(){
+                let square=document.getElementById("box1");
+                let timePassed=Date.now()-startAnimTime;
+                if (timePassed >=3000){
+                    startAnimTime=Date.now();
+                    square.style.left="0px";
+                }
+                square.style.left=timePassed/6+"px";
+            }
+            function midAnim(){
+                let square=document.getElementById("box2");
+                let timePassed=Date.now()-startAnimTime;
+                if (timePassed >=3000){
+                    startAnimTime=Date.now();
+                    square.style.left="0px";
+                }
+                square.style.left=timePassed/3+"px";
+            }
+            function fastAnim(){
+                let square=document.getElementById("box3");
+                let timePassed=Date.now()-startAnimTime;
+                if (timePassed >=3000){
+                    startAnimTime=Date.now();
+                    square.style.left="0px";
+                }
+                square.style.left=timePassed+"px";
+            }
+
+
+         </script>
+    </body>
+</html>

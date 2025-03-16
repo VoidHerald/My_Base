@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lab-6</title>
+ <script language="JavaScript">
+   var dopWin;
+   function myWindowOpen(){dopWin = window.open( "", "MyWin", "width=200px,height=50px");}
+
+   function myWindowClose(){dopWin.window.close();}
+
+   function Tiform(){
+	  document.write("<table border>");
+    document.write("<tr>"+"<td>"+"Вся информация</td><td>"+navigator.userAgent+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Версия браузера</td><td>"+navigator.appVersion+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Название браузера</td><td>"+navigator.appName+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Параметры OC</td><td>"+navigator.platform+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Включен ли джава</td><td>"+navigator.javaEnabled()+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Длинна экрана</td><td>"+screen.width+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Ширина экрана</td><td>"+screen.height+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Глубина цвета</td><td>"+screen.colorDepth+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Количество посещенных URL</td><td>"+history.length+"</td><tr>");
+    document.write("<tr>"+"<td>"+"URL текущего документа целиком</td><td>"+location.href+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Путь к загруженному документу</td><td>"+location.pathname+"</td><tr>");
+    document.write("<tr>"+"<td>"+"Имя домена загруженного документа</td><td>"+location.host+"</td><tr>");
+    document.write("</table>");
+    document.write("<div>"+navigator.userAgent+"<div>"+"<br>");
+    document.write("<div>"+navigator.appVersion+"<div>");}
+
+   function Text1(){dopWin.window.document.write("<span id='span1'>ВОТ ТЕКСТ</span>"+"<br>");}
+   
+   function TextDel(){dopWin.window.document.getElementById("span1").innerHTML=""}
+
+ </script>
+ <meta charset="UTF-8">
+</head>
+<body>
+<input type="button" value="Открытие окна" onclick="myWindowOpen()" />
+<input type="button" value="Закрытие окна" onclick="myWindowClose()" />
+<input type="button" value="Выведение текста" onclick="Text1()" />
+<input type="button" value="Удаление текста" onclick="TextDel()" />
+<input type="button" value="Таблица" onclick="Tiform()" />
+</body>
+</html>

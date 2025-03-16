@@ -1,0 +1,28 @@
+.Square{
+    position:absolute;
+    top: 200px;
+    display:block;
+    float:left;
+    padding:10px;
+    border:1px solid #000;
+    background-color:red;
+}
+
+.CircleSquare{
+    position:absolute;
+    top: 200px;
+    left: 300px;
+    width:30px;
+    height:30px;
+    background-color:red;
+}
+
+
+.CircleSquare_{
+    position:absolute;
+    top: 200px;
+    left: 500px;
+    width:30px;
+    height:30px;
+    background-color:rebeccapurple;
+}

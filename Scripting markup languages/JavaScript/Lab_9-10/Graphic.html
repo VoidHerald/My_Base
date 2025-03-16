@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <form name="first">
+    <fieldset>
+
+      <legend>Graphs Functions:</legend>
+
+      <sapn>Choose function:</sapn>
+        <input type="radio" name="s" value="1" id="1c"><label for="1c">y=x2</label>
+        <input type="radio" name="s" value="2" id="2c"><label for="2c">y=x3</label>
+        <input type="radio" name="s" value="3" id="3c"><label for="3c">y=sin(x)</label>
+        <input type="radio" name="s" value="4" id="4c"><label for="4c">y=cos(x)</label>
+      <br>
+
+      <sapn>Choose colour for Chart</sapn>
+
+      <select name="select">
+        <option>red</option>
+        <option>yellow</option>
+        <option>blue</option>
+        <option>green</option>
+      </select>
+
+      <input type="button" value="DroveGraph" onclick="built()">
+    </fieldset>
+  </form>
+
+<script type="text/javascript">
+  function built(){
+    let myWindow=window.open("","BOX","width=700,height=700");
+    let color =document.forms.first.select.value;
+    myWindow.document.write(` <style>div{position:absolute;background-color:${color}}</style> `);
+
+    let windowWidth=myWindow.outerWidth;
+    let windowHeight=myWindow.outerHeight+200;
+
+    let x0 = windowWidth/2;
+    let y0 = windowHeight/2;
+    let kx = windowWidth/5;
+    let ky = windowHeight/5;
+
+    let num=document.forms.first.s.value;
+    num=1*num;
+
+    let  Ordinata;
+
+    for ( let x = - 25; x < 25; x = x + 0.01 ){
+      switch (num){
+        case 1: {
+          Ordinata=Math.pow(x,2);break;
+        }
+        case 2: {
+          Ordinata=Math.pow(x,3);break;
+        }
+        case 3: {
+           Ordinata=Math.sin(x);break;
+        }
+        case 4: {
+          Ordinata=Math.cos(x);break;
+        }
+        default: {
+          Ordinata=x*Math.sin(x);
+        }
+      }
+
+      myWindow.document.write("<div style='left:"+(x0+kx*x)+'px'+";top:"+(y0-ky*Ordinata)+'px'+" '>.</div>");
+    }
+  }
+</script>
+</body>
+</html>

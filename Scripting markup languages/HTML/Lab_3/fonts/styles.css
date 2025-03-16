@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: "NewFont1";
+    src: url("Caveat.woff");
+}
+@font-face {
+    font-family:"NewFont2";
+    src: url("Exo2.woff")
+}
+@font-face {
+    font-family:"NewFont3";
+    src: url("Comfortaa.woff")
+}
+
+h1 {
+    font-family:"NewFont1",cursive;
+    /*Для заголовка h1 убрать отступ до следующего заголовка, выравнивание по центру,
+     начертание полужирный, прописные буквы, размер 45px, добавить тень */
+    margin-bottom:0;
+    text-align:center;
+    font-weight: bold;
+    text-transform:uppercase;
+    font-size:45px;
+    text-shadow: 1px 0 20px coral;
+}
+
+
+h2 {
+    font-family:"NewFont2",cursive;
+    /*Для заголовков h2 отступ до текста снизу 1.2em,
+    отступ сверху 0.2rem отступ первой строки равным 25px,
+    выравнивание по левому краю;*/
+    margin-bottom:1.2em;
+    margin-top:0.2rem;
+    text-indent:25px;
+    text-align:left;
+    text-shadow: 1px 0 1em darkviolet;
+}
+
+
+
+p {
+    font-family:NewFont3,cursive;
+    /*2.3 Для абзацев сделать отступ первой строки равным 25px, выравнивание по ширине,
+     убрать отступы между абзацами, интерлиньяж задать 200%, размер шрифта 20px.*/
+    text-indent:25px;
+    text-align:justify;
+    margin-bottom:0;
+    margin-top:0;
+    line-height:200%;
+    font-size:20px;
+    text-shadow: 1px 0 1em darkred;
+}
+
+p:first-letter{
+    /*Используя псевдоэлементы изменить первую букву каждого абзаца сделав
+    полужирным начертанием, размером 45px,белого цвета, фон hsla (275, 100%, 10%, 1)*/
+    font-weight:bold;
+    font-size:45px;
+    color:white;
+    background:hsla(275,100%,10%,1);
+}
+    /*В этом же документе создать нумерованный список из 5 пунктов.
+    Нумерацию списка сделать из заглавных римских цифр синего цвета,
+    текст пункта черного цвета, гарнитура и размер текста
+    соответствует тексту предыдущих абзацев. Перед списком добавить заголовок
+    второго уровня, после которого должен отсутствовать отступ.*/
+
+#before_list{
+    margin-bottom:0;
+    font-family:"NewFont2",cursive;
+    /*Для заголовков h2 отступ до текста снизу 1.2em,
+    отступ сверху 0.2rem отступ первой строки равным 25px,
+    выравнивание по левому краю;*/
+    margin-top:0.2rem;
+    text-indent:25px;
+    text-align:left;
+    text-shadow: 1px 0 1em darkviolet;
+}
+ol li {
+    color: black;
+    font-family:NewFont3,cursive;
+    font-size:20px;
+    list-style-position: inside;
+    list-style-type: none;
+    counter-increment: item;
+}
+ ol li:before {
+     content:counter(item,upper-roman) ".";
+     color:darkblue;
+ }
+
